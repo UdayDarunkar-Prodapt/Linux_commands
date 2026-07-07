@@ -1,27 +1,33 @@
-echo "Enter the 1st subject mark: "
+echo "Enter the 1st subject mark:"
 read a
+
 echo "Enter the 2nd subject mark:"
-read b 
+read b
+
 echo "Enter the 3rd subject mark:"
 read c
+
 echo "Enter the 4th subject mark:"
 read d
-echo "Enter the 5th subject mark: "
+
+echo "Enter the 5th subject mark:"
 read e
 
-total = $((a + b + c + d + e))
-average = $((total/5))
+# Calculate total and average
+total=$((a + b + c + d + e))
+average=$((total / 5))
 
-# display 
-echo "Total marrks $total"
-echo "Average marks $average"
+# Display
+echo "Total Marks: $total"
+echo "Average Marks: $average"
 
-# display the grade 
-if [ average -ge 90 ]; then 
-  grade = "A+"
-elif [ average -ge 80 ]; then 
-  grade = "B+"
-else grade = "C"
+# Display the grade
+if [ $average -ge 90 ]; then
+    grade="A+"
+elif [ $average -ge 80 ]; then
+    grade="B+"
+else
+    grade="C"
 fi
 
-echo "Grade $grade"
+echo "Grade: $grade"
