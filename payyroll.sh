@@ -9,8 +9,11 @@ do
     [ -z "$salary" ] && continue
 
     
-    [[ ! "$salary" =~ ^[0-9]+$ ]] && continue
-
+   if [ -z "$salary" ]
+   then
+    continue
+   fi
+   
     if [ "$salary" -le 30000 ]
     then
         tax=$((salary * 5 / 100))
